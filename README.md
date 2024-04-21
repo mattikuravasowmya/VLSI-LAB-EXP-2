@@ -1,10 +1,9 @@
 ## SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
 
 ## AIM: 
- To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
-
+To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using vivado.
 ## APPARATUS REQUIRED:
-vivado 2023.2.
+vivado 2023
 ## PROCEDURE:
 STEP:1 Start the vivado software, Select and Name the New project.
 
@@ -47,7 +46,7 @@ MAGNITUDE COMPARATOR
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
 ## VERILOG CODE
-## 8-3 ENCODER:
+# 8-3 ENCODER:
 
 module encoder(d,a,b,c);
 
@@ -61,7 +60,8 @@ or (c,d[1],d[3],d[5],d[7]);
 
 endmodule
 
-## 3-8 DECODER:
+# 3-8 DECODER:
+
 module decoder(A,E,Y);
 
 input [1:0]A;
@@ -92,7 +92,8 @@ decoder_2_4 d2(A[1:0],~A[2],Y[7:4]);
 
 endmodule
 
-## 8-1 MULTIPLEXER:
+# 8-1 MULTIPLEXER:
+
 module multi(i,s,y);
 
 input[7:0]i;
@@ -124,11 +125,13 @@ case({s[2],s[1],s[0]})
 3'b111:y=i[7];
 
 endcase
+
 end
 
 endmodule
 
-## 1-8 DEMULTIPLEXER:
+# 1-8 DEMULTIPLEXER:
+
 module demultiplexer(d1,d2,d3,d4,d5,d6,d7,d8,i,s0,s1,s2);
 
 input i,s0,s1,s2;
@@ -152,6 +155,7 @@ and g6(d3,w1,s1,w3,i);
 and g7(d4,w1,s1,s2,i);
 
 and g8(d5,s0,w2,w3,i);
+
 and g9(d6,s0,w2,s2,i);
 
 and g10(d7,s0,s1,w3,i);
@@ -160,7 +164,8 @@ and g11(d8,s0,s1,s2,i);
 
 endmodule
 
-## 2 BIT MAGNITUDE COMPARATOR :
+# 2 BIT MAGNITUDE COMPARATOR :
+
 module mag_com(a,b,gt,it,eq);
 
 input [3:0]a,b;
@@ -182,6 +187,7 @@ it = 1'b0;
 eq = 1'b0;
 
 end
+
 else if(a<b)
 
 begin
@@ -209,19 +215,38 @@ end
 end
 
 endmodule
-## OUTPUT WAVEFORM:
-## ENCODER:
-![image](https://github.com/vandana9676/VLSI-LAB-EXP-2/assets/165563035/da6284b7-a84f-4fae-b587-f84c6b1109c7)
-## DECODER:
-![image](https://github.com/vandana9676/VLSI-LAB-EXP-2/assets/165563035/c1e8425e-1196-4d80-b328-4be14f61f847)
-## MULTIPLEXER:
-![image](https://github.com/vandana9676/VLSI-LAB-EXP-2/assets/165563035/7ae02b4a-d118-4270-8ed2-03f3eb190824)
-## DEMULTIPLEXER:
-![image](https://github.com/vandana9676/VLSI-LAB-EXP-2/assets/165563035/67648fab-658c-4065-b0ed-b96b9757f08b)
-## 2 BIT MAGNITUDE COMPARATOR:
-![image](https://github.com/vandana9676/VLSI-LAB-EXP-2/assets/165563035/321571a2-d24d-45b4-8c7a-24a9e956b5bc)
-## RESULT:
+
+# OUTPUT WAVEFORM:
+
+# ENCODER:
+
+![image](https://github.com/mattikuravasowmya/VLSI-LAB-EXP-2/assets/161432676/2da038c9-41b7-4dea-b8f7-e169a2680899)
+
+# DECODER:
+
+![image](https://github.com/mattikuravasowmya/VLSI-LAB-EXP-2/assets/161432676/faeae0b1-eed3-42dd-838f-c37201470e96)
+
+# MULTIPLEXER:
+
+![image](https://github.com/mattikuravasowmya/VLSI-LAB-EXP-2/assets/161432676/f4d50e6f-1687-454d-9f7a-90b6866618ef)
+
+# DEMULTIPLEXER:
+
+![image](https://github.com/mattikuravasowmya/VLSI-LAB-EXP-2/assets/161432676/2f40a1f8-0cf1-4b8f-8eb8-0043592a15af)
+
+# 2 BIT MAGNITUDE COMPARATOR:
+
+![image](https://github.com/mattikuravasowmya/VLSI-LAB-EXP-2/assets/161432676/ca71c7f6-2dc7-4b8c-b800-6caa709c72a2)
+
+# RESULT:
 Thus the simulation and synthesis of ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, 2bit MAGNITUDE COMPARATOR using vivado is successfully completed and executed.
+
+
+
+
+
+
+
 
 
 
